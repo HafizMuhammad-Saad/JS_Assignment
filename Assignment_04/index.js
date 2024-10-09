@@ -40,15 +40,26 @@ const inputEl = document.querySelector("#input-el")
 const nameEl = document.querySelector("#change-name")
 const nameTitle = document.querySelector("#name-title")
 nameEl.addEventListener("click", function() {
-    nameTitle.textContent = inputEl.value
-    inputEl.value = ""
+
+    // nameTitle.textContent = inputEl.value
+    // inputEl.value = ""
+    if (inputEl.value.trim() !== "") {
+        nameTitle.textContent = inputEl.value;
+        inputEl.value = "";
+    } else {
+        alert("Please enter a valid name.");
+    }
 })
 
 const descriptionEl = document.querySelector("#change-description")
 const nameDescription = document.querySelector("#name-description")
 descriptionEl.addEventListener("click", function() {
-    nameDescription.textContent = inputEl.value
-    inputEl.value = "";
+    if (inputEl.value.trim() !== "") {
+        nameDescription.textContent = inputEl.value;
+        inputEl.value = "";
+    } else {
+        alert("Please enter a valid description.");
+    }
 })
 
 const resetEl = document.querySelector("#reset")
