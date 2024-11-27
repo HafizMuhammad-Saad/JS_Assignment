@@ -358,7 +358,6 @@ function displayProduct() {
         `
     }
     containerMain.innerHTML = data;
-    containerMain.style.width = '20%'
-    // containerMain.style.height = 
+    containerMain.style.width = '40vh'
 }
  
